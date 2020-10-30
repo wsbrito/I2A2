@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Application Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="static/css/home.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="banner">Insurance Evaluation - Demo Application</h1>
+        <div class="section editor">
+            <label for="driver-quality">Driver quality:
+                <select id="driver-quality">
+                    <option value="">Select ...</option>
+                    <option value="0">Poor</option>
+                    <option value="1">Normal</option>
+                    <option value="2">Excellent</option>
+                </select>
+            </label>
+            <br />
+            <label for="this-car-cost">Car cost:
+                <select id="this-car-cost">
+                    <option value="">Select ...</option>
+                    <option value="0">Ten Thousand</option>
+                    <option value="1">Thousand</option>
+                    <option value="2">Hundred Thousand</option>
+                    <option value="3">Million</option>
+                </select>
+            </label>
+            <br />
+            <label for="prop-cost">Property cost:
+                <select id="prop-cost">
+                    <option value="">Select ...</option>
+                    <option value="0">Ten Thousand</option>
+                    <option value="1">Thousand</option>
+                    <option value="2">Hundred Thousand</option>
+                    <option value="3">Million</option>
+                </select>
+            </label>
+            <br />
+            <label for="other-car-cost">Other car cost:
+                <select id="other-car-cost">
+                    <option value="">Select ...</option>
+                    <option value="0">Thousand</option>
+                    <option value="1">Hundred Thousand</option>
+                    <option value="2">Ten Thousand</option>
+                </select>
+            </label>
+            <br />
+            <button id="run">Run</button>
+        </div>
+        <div class="response">
+        </div>
+        <div class="error">
+        </div>
+    </div>
+</body>
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous">
+</script>
+<script src="static/js/home.js"></script>
+</html>
