@@ -1,0 +1,44 @@
+swagger: "2.0"
+info:
+  description: This is the swagger file that goes with our server code
+  version: "1.0.0"
+  title: Swagger Rest Article
+consumes:
+  - application/json
+produces:
+  - application/json
+
+basePath: /api
+
+# Paths supported by the server application
+paths:
+  /insurance:
+    post:
+      operationId: insurance.run
+      tags:
+        - Insurance Evaluation
+      summary: Run the insurance evaluation
+      description: Run the insurance evaluation
+      parameters:
+        - name: insurance
+          in: body
+          description: Person to create
+          required: True
+          schema:
+            type: object
+            properties:
+              driver_quality:
+                type: string
+                description: Driver quality
+              this_car_cost:
+                type: string
+                description: Car cost
+              prop_cost:
+                type: string
+                description: Property cost
+              other_car_cost:
+                type: string
+                description: Property cost
+      responses:
+        200:
+          description: Successfully run the insurance evaluation

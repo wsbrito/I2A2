@@ -6,11 +6,11 @@ from flask import (Flask, render_template)
 import connexion
 
 # Create the application instance
-#app = Flask(__name__, template_folder="templates")
+# Para visualizar o swagger http://0.0.0.0:5000/api/ui
 app = connexion.App(__name__, specification_dir="./")
 
-# Read the swagger.yml file to configure the endpoints
-#app.add_api('swagger.yml')
+# Read the swagger-original.yml file to configure the endpoints
+app.add_api('swagger.yml')
 
 # Create a URL route in our application for "/"
 @app.route('/')

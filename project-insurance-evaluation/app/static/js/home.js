@@ -14,6 +14,35 @@ ns.model = (function() {
 
     // Return the API
     return {
+        'run': function(driver_quality,this_car_cost,prop_cost,other_car_cost) {
+            let ajax_options = {
+                type: 'POST',
+                url: 'api/insurance',
+                accepts: 'application/json',
+                contentType: 'application/json',
+                dataType: 'json',
+                data: JSON.stringify({
+                    'driver_quality': driver_quality,
+                    'this_car_cost': this_car_cost,
+                    'prop_cost': prop_cost,
+                    'other_car_cost': other_car_cost
+                })
+            };
+            console.log(ajax_options.data);
+
+            $.ajax(ajax_options)
+            .done(function(data) {
+                console.log('triggered model_create_success');
+                $event_pump.trigger('model_create_success', [data]);
+            })
+            .fail(function(xhr, textStatus, errorThrown) {
+                console.error('triggered model_error');
+                console.error('xhr',xhr);
+                console.error('textStatus',textStatus);
+                console.error('errorThrown',errorThrown);
+                $event_pump.trigger('model_error', [xhr, textStatus, errorThrown]);
+            })
+        }
     };
 }());
 
@@ -42,31 +71,44 @@ ns.view = (function() {
 ns.controller = (function(m, v) {
     'use strict';
 
-    /*
     let model = m,
         view = v,
         $event_pump = $('body'),
-        $fname = $('#fname'),
-        $lname = $('#lname');
-    */
-
-    // Get the data from the model after the controller is done initializing
-    setTimeout(function() {
-        //model.read();
-    }, 100)
+        $driver_quality = $('#driver_quality'),
+        $this_car_cost = $('#this_car_cost'),
+        $prop_cost = $('#prop_cost'),
+        $other_car_cost = $('#other_car_cost');
 
     // Validate input
-    function validate() {
-        return false;
+    function validate(driver_quality,this_car_cost,prop_cost,other_car_cost) {
+        /*
+        console.log('validate run');
+        console.log('driver_quality: '+driver_quality);
+        console.log('this_car_cost: '+this_car_cost);
+        console.log('prop_cost: '+prop_cost);
+        console.log('other_car_cost: '+other_car_cost);
+        */
+        return driver_quality !== "" && this_car_cost !== "" && prop_cost !== "" && other_car_cost !== "";
     }
 
-    $('#run').click(function() {
-        alert('run was clicked!');
+    $('#run').click(function(e) {
+        //alert('run was clicked!');
+        let driver_quality = $driver_quality.val(),
+            this_car_cost = $this_car_cost.val(),
+            prop_cost = $prop_cost.val(),
+            other_car_cost = $other_car_cost.val();
+
+        e.preventDefault();
+
+        if(validate(driver_quality,this_car_cost,prop_cost,other_car_cost)) {
+            model.run(driver_quality,this_car_cost,prop_cost,other_car_cost);
+        } else {
+            alert('Please, select all options.');
+        }
     })
 
     $event_pump.on('model_create_success', function(e, data) {
         alert('model_create_success!');
-        //model.read();
     });
 
     $event_pump.on('model_error', function(e, xhr, textStatus, errorThrown) {
