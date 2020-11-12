@@ -4,12 +4,103 @@
     <meta charset="UTF-8">
     <title>Application Home Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
     <link rel="stylesheet" href="static/css/home.css">
+    <link rel="icon" type="image/png" href="static/images/favicon.png"/>
 </head>
 <body>
     <div class="container">
-        <h1 class="banner">Insurance Evaluation - Demo Application</h1>
+        <div class="media"> <!-- class="mr-3" -->
+            <img src="static/images/capa.png"  alt="WSBrito Consultoria">
+        </div>
+        <h1 class="banner h1">Insurance Evaluation - Demo Application</h1>
         <div class="section editor">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm">
+                    <label for="driver_quality">Driver quality:
+                    </label>
+                </div>
+                <div class="col-sm">
+                    <select id="driver_quality">
+                        <option value="">Select ...</option>
+                        <option value="0">Poor</option>
+                        <option value="1">Normal</option>
+                        <option value="2">Excellent</option>
+                    </select>
+                </div>
+                <div class="col-sm">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm">
+                    <label for="this_car_cost">Car cost:
+                    </label>
+                </div>
+                <div class="col-sm">
+                    <select id="this_car_cost">
+                        <option value="">Select ...</option>
+                        <option value="0">Ten Thousand</option>
+                        <option value="1">Thousand</option>
+                        <option value="2">Hundred Thousand</option>
+                        <option value="3">Million</option>
+                    </select>
+                </div>
+                <div class="col-sm">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm">
+                    <label for="prop_cost">Property cost:
+                    </label>
+                </div>
+                <div class="col-sm">
+                    <select id="prop_cost">
+                        <option value="">Select ...</option>
+                            <option value="0">Ten Thousand</option>
+                        <option value="1">Thousand</option>
+                        <option value="2">Hundred Thousand</option>
+                        <option value="3">Million</option>
+                    </select>
+                </div>
+                <div class="col-sm">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm">
+                    <label for="other_car_cost">Other car cost:
+                    </label>
+                </div>
+                <div class="col-sm">
+                    <select id="other_car_cost">
+                        <option value="">Select ...</option>
+                        <option value="0">Thousand</option>
+                        <option value="1">Hundred Thousand</option>
+                        <option value="2">Ten Thousand</option>
+                    </select>
+                </div>
+                <div class="col-sm">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm">
+                </div>
+                <div class="col-sm">
+                    <button id="run" class="btn btn-primary">Run</button>
+                </div>
+                <div class="col-sm">
+                </div>
+              </div>
+
+            </div>
+
+            <!--
             <label for="driver_quality">Driver quality:
                 <select id="driver_quality">
                     <option value="">Select ...</option>
@@ -49,16 +140,53 @@
             </label>
             <br />
             <button id="run">Run</button>
+            <div id="espace">
+                <br/>
+            </div>
+            -->
         </div>
-        <div class="response">
-        </div>
-        <div class="error">
+        <div class="section editor"  style="visibility: hidden">
+            <div class="response">
+                <div id="response" role="alert" style="visibility: hidden">
+                </div>
+                <!--
+                <div id="response-none" class="alert alert-primary" role="alert" style="visibility: hidden">
+                    Accident severity level: None.
+                </div>
+                <div id="response-mild" class="alert alert-secondary" role="alert" style="visibility: hidden">
+                    Accident severity level: Mild.
+                </div>
+                <div id="response-moderate" class="alert alert-warning" role="alert" style="visibility: hidden">
+                    Accident severity level: Moderate.
+                </div>
+                <div id="response-severe" class="alert alert-danger" role="alert" style="visibility: hidden">
+                    Accident severity level: Severe.
+                </div>
+                -->
+            </div>
+            <div class="error">
+            </div>
         </div>
     </div>
+    <nav class="navbar fixed-bottom navbar-dark bg-dark">
+      <a class="navbar-brand navbar-expand-sm" href="http://www.wsbritoconsultoria.com.br">Developed by WSBrito Consultoria©</a>
+    </nav>
+
 </body>
 <script src="http://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous">
 </script>
+<!--
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+-->
 <script src="static/js/home.js"></script>
 </html>
