@@ -15,33 +15,32 @@
         <div class="media"> <!-- class="mr-3" -->
             <img src="static/images/capa.png"  alt="WSBrito Consultoria">
         </div>
-        <h1 class="banner h1">Insurance Evaluation - Demo Application</h1>
+        <h3 class="banner">Insurance Evaluation - Demo Application</h3>
         <div class="section editor">
             <div class="container">
+
               <div class="row">
-                <div class="col-sm">
+                <div class="col-3">
                     <label for="driver_quality">Driver quality:
                     </label>
                 </div>
-                <div class="col-sm">
-                    <select id="driver_quality">
+                <div class="col-6">
+                    <select id="driver_quality" class="form-control form-control-sm">
                         <option value="">Select ...</option>
                         <option value="0">Poor</option>
                         <option value="1">Normal</option>
                         <option value="2">Excellent</option>
                     </select>
                 </div>
-                <div class="col-sm">
-                </div>
               </div>
 
               <div class="row">
-                <div class="col-sm">
+                <div class="col-3">
                     <label for="this_car_cost">Car cost:
                     </label>
                 </div>
-                <div class="col-sm">
-                    <select id="this_car_cost">
+                <div class="col-6">
+                    <select id="this_car_cost" class="form-control form-control-sm">
                         <option value="">Select ...</option>
                         <option value="0">Ten Thousand</option>
                         <option value="1">Thousand</option>
@@ -49,17 +48,15 @@
                         <option value="3">Million</option>
                     </select>
                 </div>
-                <div class="col-sm">
-                </div>
               </div>
 
               <div class="row">
-                <div class="col-sm">
+                <div class="col-3">
                     <label for="prop_cost">Property cost:
                     </label>
                 </div>
-                <div class="col-sm">
-                    <select id="prop_cost">
+                <div class="col-6">
+                    <select id="prop_cost" class="form-control form-control-sm">
                         <option value="">Select ...</option>
                             <option value="0">Ten Thousand</option>
                         <option value="1">Thousand</option>
@@ -67,102 +64,36 @@
                         <option value="3">Million</option>
                     </select>
                 </div>
-                <div class="col-sm">
-                </div>
               </div>
 
               <div class="row">
-                <div class="col-sm">
+                <div class="col-3">
                     <label for="other_car_cost">Other car cost:
                     </label>
                 </div>
-                <div class="col-sm">
-                    <select id="other_car_cost">
+                <div class="col-6">
+                    <select id="other_car_cost" class="form-control form-control-sm">
                         <option value="">Select ...</option>
                         <option value="0">Thousand</option>
                         <option value="1">Hundred Thousand</option>
                         <option value="2">Ten Thousand</option>
                     </select>
                 </div>
-                <div class="col-sm">
-                </div>
               </div>
 
               <div class="row">
-                <div class="col-sm">
-                </div>
-                <div class="col-sm">
-                    <button id="run" class="btn btn-primary">Run</button>
-                </div>
-                <div class="col-sm">
+                <div class="col-12">
+                    <br/>
+                    <button id="run" class="btn btn-primary btn-block">Evaluate</button>
                 </div>
               </div>
 
             </div>
-
-            <!--
-            <label for="driver_quality">Driver quality:
-                <select id="driver_quality">
-                    <option value="">Select ...</option>
-                    <option value="0">Poor</option>
-                    <option value="1">Normal</option>
-                    <option value="2">Excellent</option>
-                </select>
-            </label>
-            <br />
-            <label for="this_car_cost">Car cost:
-                <select id="this_car_cost">
-                    <option value="">Select ...</option>
-                    <option value="0">Ten Thousand</option>
-                    <option value="1">Thousand</option>
-                    <option value="2">Hundred Thousand</option>
-                    <option value="3">Million</option>
-                </select>
-            </label>
-            <br />
-            <label for="prop_cost">Property cost:
-                <select id="prop_cost">
-                    <option value="">Select ...</option>
-                    <option value="0">Ten Thousand</option>
-                    <option value="1">Thousand</option>
-                    <option value="2">Hundred Thousand</option>
-                    <option value="3">Million</option>
-                </select>
-            </label>
-            <br />
-            <label for="other_car_cost">Other car cost:
-                <select id="other_car_cost">
-                    <option value="">Select ...</option>
-                    <option value="0">Thousand</option>
-                    <option value="1">Hundred Thousand</option>
-                    <option value="2">Ten Thousand</option>
-                </select>
-            </label>
-            <br />
-            <button id="run">Run</button>
-            <div id="espace">
-                <br/>
-            </div>
-            -->
         </div>
         <div class="section editor"  style="visibility: hidden">
             <div class="response">
                 <div id="response" role="alert" style="visibility: hidden">
                 </div>
-                <!--
-                <div id="response-none" class="alert alert-primary" role="alert" style="visibility: hidden">
-                    Accident severity level: None.
-                </div>
-                <div id="response-mild" class="alert alert-secondary" role="alert" style="visibility: hidden">
-                    Accident severity level: Mild.
-                </div>
-                <div id="response-moderate" class="alert alert-warning" role="alert" style="visibility: hidden">
-                    Accident severity level: Moderate.
-                </div>
-                <div id="response-severe" class="alert alert-danger" role="alert" style="visibility: hidden">
-                    Accident severity level: Severe.
-                </div>
-                -->
             </div>
             <div class="error">
             </div>
