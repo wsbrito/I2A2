@@ -5,7 +5,9 @@ Analisys of insurance.csv file to produce a classification model and a simple we
 
 ## Requirements
 Anaconda distribution >= 4.9.1
+
 Python 3.7.6
+
 Import the environment file wsbrito-insurance.yml using conda env create -f command;
 
 ## How to run
