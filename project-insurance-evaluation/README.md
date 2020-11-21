@@ -16,6 +16,6 @@ Import the environment file wsbrito-insurance.yml using conda env create -f comm
 
 **Web application**: Insede project-insurance-evaluation\app run ```python app-server.py``` 
 
-This is a example of prediction using Web Application:<br>
+This is a example of prediction using **web application**:<br>
 ![Screenshot from Web application](screenshot.png "Screenshot from Web application")
 
