@@ -15,5 +15,6 @@ Import the environment file wsbrito-insurance.yml using conda env create -f comm
 **Notebook analisys**: Inside project-insurance-evaluation folder just run ```jupyter notebbok```.
 
 **Web application**: Insede project-insurance-evaluation\app run ```python app-server.py``` 
+
 !(/https://github.com/wsbrito/portfolio/blob/master/project-insurance-evaluation/screenshot.png "Screenshot from Web application")
 
