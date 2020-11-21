@@ -16,5 +16,5 @@ Import the environment file wsbrito-insurance.yml using conda env create -f comm
 
 **Web application**: Insede project-insurance-evaluation\app run ```python app-server.py``` 
 
-![Screenshot from Web application](/screenshot.png "Screenshot from Web application")
+![Screenshot from Web application](project-insurance-evaluation/screenshot.png "Screenshot from Web application")
 
