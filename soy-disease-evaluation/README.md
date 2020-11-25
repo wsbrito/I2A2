@@ -6,12 +6,21 @@ To produce the models I run 3 different classification algorithms: Support Vecto
 
 ## Necessary imports:
 import pandas as pd
+
 import numpy as np
+
 from sklearn.preprocessing import LabelEncoder
+
 from sklearn.model_selection import train_test_split
+
 from sklearn.ensemble import ExtraTreesClassifier
+
 from sklearn.svm import SVC
+
 from sklearn.metrics import confusion_matrix, accuracy_score
+
 from sklearn.naive_bayes import GaussianNB
+
 from sklearn.ensemble import RandomForestClassifier
+
 
